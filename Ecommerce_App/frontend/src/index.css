@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-50 min-h-screen overflow-x-hidden;
+  }
+
+  a {
+    @apply no-underline text-inherit transition-all duration-300;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-zinc-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-800 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-700;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block text-center bg-gradient-to-br from-brand to-brand-dark text-white font-semibold
+           py-3 px-6 rounded-lg cursor-pointer shadow-brand transition-all duration-300
+           hover:-translate-y-0.5 hover:shadow-brand-lg hover:brightness-110 active:translate-y-px border-none;
+  }
+
+  .heading-fade {
+    @apply text-white bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent;
+  }
+}
